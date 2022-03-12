@@ -182,7 +182,7 @@ denz.on('CB:action,,call', async json => {
         denz.sendMessage(callerId, { displayname: `${NamaOwner}`, vcard: vcard}, MessageType.contact, {contextInfo: { externalAdReply:{title: `Developer ${NamaBot}`,body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./denz.jpg'),sourceUrl:`https://wa.me/6283145831517?text=Assalamualaikum`}}})
         await sleep(5000)
         await denz.blockUser(callerId, "add")
-        })
+        )
         
 	}
 })
