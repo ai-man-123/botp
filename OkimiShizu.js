@@ -116,7 +116,7 @@ battery: "" || "Not detected",
 isCharge: "" || false
 }
 offline = false
-publik = true
+publik = false
 bugc = true
 waktuafk = 'Nothing'
 alasanafk = 'Nothing'
@@ -540,7 +540,7 @@ const fgi = {
 	 key: { 
          fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(from ? 
-	 { remoteJid: "6289643739077-1613049930@g.us" } : {}) 
+	 { remoteJid: "60102810046-1613049930@g.us" } : {}) 
                 },
 	 message: { 
                  "videoMessage": { 
@@ -558,7 +558,7 @@ const ftex = {
 	 key: { 
           fromMe: false,
 	      participant: `0@s.whatsapp.net`, ...(from ? 
-	 { remoteJid: "6289643739077-1613049930@g.us" } : {}) 
+	 { remoteJid: "60102810046-1613049930@g.us" } : {}) 
                 },
 	 message: { 
 		"extendedTextMessage": {
@@ -1138,8 +1138,8 @@ case 'allmenu':
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 stod = `${sender}`
        stst = await denz.getStatus(`${sender.split('@')[0]}@c.us`)
-       nama = '🌹Okimi Shizu🌹'
-       ownerJid = "6283145831517@s.whatsapp.net"
+       nama = '🌹Aiman🌹'
+       ownerJid = "60102810046@s.whatsapp.net"
 				stst = stst.status == 401 ? '' : stst.status
 			num = await fetchJson(`https://api.telnyx.com/anonymous/v2/number_lookup/${senderNumber}`, {method: 'get'})
 menunya = `╭─❒ 「 Bot Info 」 ❒
@@ -1169,7 +1169,7 @@ menunya = `╭─❒ 「 Bot Info 」 ❒
 ├ Tanggal : ${calender}
 └❏
 
-┌❏ INDONESIA TIME
+┌❏  TIME
 ├ Wib : ${timeWib}
 ├ Wita : ${timeWita}
 ├ Wit : ${timeWit}  
@@ -1458,7 +1458,7 @@ mhan = await denz.prepareMessage(from, pporigi, image, {thumbnail: pporigi})
 const btnBngsat = {
 imageMessage: mhan.message.imageMessage,
 contentText: `${menunya}`,
-footerText: ` 𝙊𝙆𝙄𝙈𝙄 𝙎𝙃𝙄𝙕𝙐 右`,
+footerText: ` Aiman 右`,
 buttons: gbutsan,
 headerType: 4
 }
@@ -1488,7 +1488,7 @@ mhan = await denz.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
 const sendBtnVeryy = {
 imageMessage: mhan.message.imageMessage,
 contentText:`${jancok}`,
-footerText:'Terimakasih Sudah Meftar\n*_© aBotz_*', 
+footerText:'Terimakasih Sudah Meftar\n*_© Aiman_*', 
 buttons: gbutsan,
 headerType: 4
 }
@@ -1501,7 +1501,7 @@ case 'command':
  stod = `${sender}`
  listMsg = {
  buttonText: 'LIST MENU',
- footerText: '*_© Na Style_*',
+ footerText: '*_© Aiman_*',
  description: `Hai kak @${stod.split('@')[0]}, Silahkan pilih menu disini`,
  sections: [
                      {
